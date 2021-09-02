@@ -21,6 +21,7 @@ const App: React.FC = () => {
   }
   return (
     <div className='App'>
+      hey
       <button className='button' onClick={sendMessage}>
         Send Message
       </button>
