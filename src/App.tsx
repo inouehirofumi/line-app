@@ -21,6 +21,7 @@ const App: React.FC = () => {
   }
   return (
     <div className='App'>
+      {process.env.REACT_APP_LIFF_ID}
       hey
       <button className='button' onClick={sendMessage}>
         Send Message
