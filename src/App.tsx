@@ -14,15 +14,13 @@ const App: React.FC = () => {
         }]).then(() => {
           window.alert('message sent');
         }).catch((error) => {
-          window.alert('error sending message: '+ process.env.REACTAPP_LIFF_ID + error);
+          window.alert('error sending message: '+ error);
         })
       }
     });
   }
   return (
     <div className='App'>
-      {process.env.REACT_APP_LIFF_ID}
-      hey
       <button className='button' onClick={sendMessage}>
         Send Message
       </button>
