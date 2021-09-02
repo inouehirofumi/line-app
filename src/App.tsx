@@ -14,7 +14,7 @@ const App: React.FC = () => {
         }]).then(() => {
           window.alert('message sent');
         }).catch((error) => {
-          window.alert('error sending message: ' + error);
+          window.alert('error sending message: '+ process.env.REACTAPP_LIFF_ID + error);
         })
       }
     });
