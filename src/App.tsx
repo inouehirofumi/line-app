@@ -1,6 +1,7 @@
 import React from 'react';
 import liff from '@line/liff';
 import './App.css';
+import Button from '@material-ui/core/Button';
 
 const App: React.FC = () => {
   const sendMessage = () => {
@@ -46,9 +47,9 @@ const App: React.FC = () => {
   }
   return (
     <div className='App'>
-      <button className='button' onClick={sendMessage}>
+      <Button variant='contained' onClick={sendMessage}>
         Send Message
-      </button>
+      </Button>
       <button className='button' onClick={getUserInfo}>
         show user info
       </button>
