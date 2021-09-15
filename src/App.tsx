@@ -52,6 +52,9 @@ const App: React.FC = () => {
       <button className='button' onClick={getUserInfo}>
         show user info
       </button>
+      <button className='button' onClick={getToken}>
+        show token
+      </button>
     </div>
   )
 }
