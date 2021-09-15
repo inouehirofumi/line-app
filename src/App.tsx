@@ -34,6 +34,16 @@ const App: React.FC = () => {
       }
     })
   }
+  const getToken = () => {
+    liff.init({ liffId: process.env.REACT_APP_LIFF_ID as string }).then(() => {
+      if (!liff.isLoggedIn()) {
+        liff.login({});
+      } else if (liff.isInClient()) {
+        const accessToken = liff.getAccessToken();
+        alert(`accessToken: ${accessToken}`);
+      }
+    })
+  }
   return (
     <div className='App'>
       <button className='button' onClick={sendMessage}>
