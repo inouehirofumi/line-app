@@ -50,12 +50,12 @@ const App: React.FC = () => {
       <Button variant='contained' onClick={sendMessage}>
         Send Message
       </Button>
-      <button className='button' onClick={getUserInfo}>
+      <Button variant='contained' onClick={getUserInfo}>
         show user info
-      </button>
-      <button className='button' onClick={getToken}>
+      </Button>
+      <Button variant='contained' onClick={getToken}>
         show token
-      </button>
+      </Button>
     </div>
   )
 }
