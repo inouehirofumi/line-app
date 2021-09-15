@@ -27,7 +27,7 @@ const App: React.FC = () => {
         liff.getProfile().then(profile => {
           const userId: string = profile.userId;
           const displayName: string = profile.displayName;
-          alert(`Name: ${displayName}, userId: ${userId}`);
+          alert(`Name: ${displayName}, userId: ${userId}, liffId: ${process.env.REACT_APP_LIFF_ID}`);
         }).catch((error) => {
           window.alert('error sending message: ' + error);
         })
