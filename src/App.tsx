@@ -61,12 +61,22 @@ const App: React.FC = () => {
       </Button>
       <BrowserRouter>
         <h1>Router</h1>
-        <Route exact path='/'>
-          <HomePage />
-        </Route>
-        <Route path='/about'>
-          <About />
-        </Route>
+        <ul>
+          <li>
+            <a href='/'>Home</a>
+          </li>
+          <li>
+            <a href='/about'>About</a>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path='/'>
+            <HomePage />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+        </Switch>
       </BrowserRouter>
 
     </div>
