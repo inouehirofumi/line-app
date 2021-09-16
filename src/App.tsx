@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import About from './components/pages/About';
+import TF from './components/pages/TF';
 
 const App: React.FC = () => {
   const sendMessage = () => {
@@ -68,6 +69,9 @@ const App: React.FC = () => {
           <li>
             <Link to='/about'>About</Link>
           </li>
+          <li>
+            <Link to='/tf'>TF</Link>
+          </li>
         </ul>
         <Switch>
           <Route exact path='/'>
@@ -75,6 +79,9 @@ const App: React.FC = () => {
           </Route>
           <Route path='/about'>
             <About />
+          </Route>
+          <Route path='/tf'>
+            <TF />
           </Route>
         </Switch>
       </BrowserRouter>
