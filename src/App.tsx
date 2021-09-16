@@ -4,6 +4,7 @@ import './App.css';
 import Button from '@material-ui/core/Button';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
+import About from './components/pages/About';
 
 const App: React.FC = () => {
   const sendMessage = () => {
@@ -60,8 +61,11 @@ const App: React.FC = () => {
       </Button>
       <BrowserRouter>
         <h1>Router</h1>
-        <Route path='/'>
+        <Route exact path='/'>
           <HomePage />
+        </Route>
+        <Route path='/about'>
+          <About />
         </Route>
       </BrowserRouter>
 
