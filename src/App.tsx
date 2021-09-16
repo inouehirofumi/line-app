@@ -2,7 +2,7 @@ import React from 'react';
 import liff from '@line/liff';
 import './App.css';
 import Button from '@material-ui/core/Button';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import About from './components/pages/About';
 
@@ -63,10 +63,10 @@ const App: React.FC = () => {
         <h1>Router</h1>
         <ul>
           <li>
-            <a href='/'>Home</a>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <a href='/about'>About</a>
+            <Link to='/about'>About</Link>
           </li>
         </ul>
         <Switch>
