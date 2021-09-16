@@ -2,6 +2,8 @@ import React from 'react';
 import liff from '@line/liff';
 import './App.css';
 import Button from '@material-ui/core/Button';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
 
 const App: React.FC = () => {
   const sendMessage = () => {
@@ -56,6 +58,13 @@ const App: React.FC = () => {
       <Button variant='contained' onClick={getToken}>
         show token
       </Button>
+      <BrowserRouter>
+        <h1>Router</h1>
+        <Route path='/'>
+          <HomePage />
+        </Route>
+      </BrowserRouter>
+
     </div>
   )
 }
